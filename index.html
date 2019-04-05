@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,27 +28,84 @@
         <div class="slider">
             <div class="slid">
                     <img src="img/main.jpg" alt="">
+                <div class="slid-content">
                     <p>1Monetize <br> your skills now!</p>
                     <button>GO!</button>
                 </div>
+                </div>
             <div class="slid opacity0">
                     <img src="img/main.jpg" alt="">
+                <div class="slid-content">
                     <p>2Monetize <br> your skills now!</p>
                     <button>GO!</button>
                 </div>
+                </div>
             <div class="slid opacity0">
                     <img src="img/main.jpg" alt="">
-                    <p>3Monetize <br> your skills now!</p>
-                    <button>GO!</button>
+                    <div class="slid-content">
+                        <p>3Monetize <br> your skills now!</p>
+                        <button>GO!</button>
+                    </div>
                 </div>
         </div>
         <div class="container" id="navigation">
-            <div class="prev"><button>prev</button></div>
-            <div class="next"><button>next</button></div>
+            <div class="button">
+                <div class="prev"><img src="img/prev.png" alt=""></div>
+                <div class="next"><img src="img/next.png" alt=""></div>
+            </div>
+
             <div class="navigation">
             </div>
         </div>
     </section>
+    <section id="content">
+        <div class="container">
+            <div class="text">
+                <h2>Something about you</h2>
+                <p>In this section, you can specify any information about yourself, insert your photos, your interests and skills. It is also desirable to use tag canvas.<br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            </div>
+            <div class="img"><span>Your photo</span><img src="img/photo.jpg" alt=""></div>
+        </div>
+    </section>
+    <section id="form">
+        <div class="container">
+            <form action="">
+                <h3>Reg ster</h3>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <div class="select">
+                    <input type="text" readonly id="input" placeholder="Country">
+                    <select style="height: 0px;" name="" id="select" size="3">
+                        <option value="Country1">Country1</option>
+                        <option value="Country2">Country2</option>
+                        <option value="Country3">Country3</option>
+                        <option value="Country4">Country4</option>
+                        <option value="Country5">Country5</option>
+                        <option value="Country6">Country6</option>
+                        <option value="Country7">Country7</option>
+                        <option value="Country8">Country8</option>
+                        <option value="Country9">Country9</option>
+                        <option value="Country10">Country10</option>
+                        <option value="Country11">Country11</option>
+                        <option value="Country12">Country12</option>
+                        <option value="Country13">Country13</option>
+                        <option value="Country14">Country14</option>
+                        <option value="Country15">Country15</option>
+                        <option value="Country16">Country16</option>
+                        <option value="Country17">Country17</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="enter">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            © 2015 layout
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,43 +1,39 @@
 const sliderImgs = document.querySelectorAll('.slid');
 let current = 0;
-let currentInput = 0;
+let currentSpan = 0;
 const sliderNext = document.querySelector('.next');
 const sliderPrev = document.querySelector('.prev');
 const navigationList = document.querySelector('.navigation');
-const navigationInput = document.querySelector('.navigation');
-const navigationInputList = navigationInput.getElementsByTagName('input');
-
+const navigationSpan = document.querySelector('.navigation');
+const navigationSpanList = navigationSpan.getElementsByTagName('span');
 for(let i = 0; sliderImgs.length>i; i++){
-    let newInput = document.createElement('input');
-    newInput.setAttribute('type', 'radio');
-    newInput.setAttribute('name', 'slider');
-    if(currentInput === 0){
-        newInput.setAttribute('checked', 'true');
+    let newSpan = document.createElement('span');
+    if(currentSpan === 0){
+        newSpan.classList.add('active');
     }
-    newInput.setAttribute('data-number', currentInput);
-    navigationList.appendChild(newInput);
-    currentInput++;
+    newSpan.setAttribute('data-number', currentSpan);
+    navigationList.appendChild(newSpan);
+    currentSpan++;
 }
 function sliderFunction() {
     for(let i = 0; sliderImgs.length>i; i++){
         sliderImgs[i].classList.add('opacity0')
     }
-    for(let i = 0; navigationInputList.length>i; i++){
-        navigationInputList[i].setAttribute('checked', 'false');
+    for(let i = 0; navigationSpanList.length>i; i++){
+        navigationSpanList[i].classList.remove('active');
     }
     sliderImgs[current].classList.remove('opacity0');
-    navigationInputList[current].setAttribute('checked', 'true');
+    navigationSpanList[current].classList.add('active');
 }
-navigationInput.addEventListener('click', function (event) {
-    if(event.target.tagName !== 'INPUT'){
+navigationSpan.addEventListener('click', function (event) {
+    if(event.target.tagName !== 'SPAN'){
         return
     }
     let a = event.target.getAttribute('data-number');
-    current = a;
+    current = +a;
     sliderFunction()
 });
 sliderNext.addEventListener('click', function () {
-    console.log(current)
     if(current + 1 >= sliderImgs.length){
         current = 0;
     }
@@ -57,6 +53,21 @@ sliderPrev.addEventListener('click', function () {
 });
 
 
+const select = document.querySelector('#select');
+const input = document.querySelector('#input');
+input.addEventListener('click', function () {
+    if(select.style.height === '0px'){
+        select.style.height = '150px';
+        select.style.bottom = '-150px';
 
-
-
+    }
+    else{
+        select.style.height = '0px';
+        select.style.bottom = '0px';
+    }
+});
+select.addEventListener('change', function (event) {
+    input.value = event.target.value;
+    select.style.height = '0px';
+    select.style.bottom = '0px';
+})
